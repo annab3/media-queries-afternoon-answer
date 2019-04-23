@@ -1,33 +1,286 @@
-.App {
+.nav_container {
+  margin-left: 8vw;
+  margin-right: 8vw;
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+}
+nav {
+  background-color: #212528;
+  height: 8vh;
+}
+
+.nav_h2 {
+  color: #fed037;
+}
+.menu_ {
+  display: none;
+  height: 0px;
+  overflow: hidden;
+}
+.menu_open {
+  display: none;
+  height: 0px;
+  overflow: hidden;
+}
+.menu_close {
+  display: none;
+  height: 0px;
+  overflow: hidden;
+}
+ul {
+  display: flex;
+  list-style: none;
+  height: auto;
+  align-items: center;
+}
+li {
+  color: white;
+  margin-left: 15px;
+}
+.header_text_line_1 {
+  font-size: 30pt;
+  font-style: italic;
+  padding: 15px;
   text-align: center;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.header_text_line_2 {
+  font-size: 50pt;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.top_container {
+  background-image: url("https://blackrockdigital.github.io/startbootstrap-agency/img/header-bg.jpg");
+  background-size: 100% 100%;
+  width: 100vw;
+  height: 80vh;
+}
+header {
+  width: 100vw;
+  /* border: 1px solid red; */
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid blue; */
+  width: 60vw;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  color: white;
+}
+.header_text_line_3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 60px;
+  color: white;
+  font-weight: bold;
+  background-color: #fed037;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+.hamburger {
+  display: none;
+}
+.service_container {
+  margin-top: 14vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.sub_service_container {
+  display: flex;
+}
+.service_discription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 30vw;
+}
+.services_h2 {
+  font-size: 34pt;
+  margin: 0;
+}
+.services_h3 {
+  font-style: italic;
+  font-size: 10pt;
+  color: darkgray;
+  margin-bottom: 10vh;
+}
+.service_display_circle {
+  background: #fed037;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: 110px;
+  height: 110px;
+  border-radius: 60px;
 }
 
-.App-link {
-  color: #61dafb;
+@media (max-width: 960px) {
+  .nav_container {
+    margin-left: 12vw;
+    margin-right: 12vw;
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+  }
+  .nav_h2 {
+    color: #fec505;
+    font-size: 14pt;
+  }
+  ul {
+    display: none;
+  }
+  .hamburger {
+    /* border: 1px solid white; */
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    max-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    background: #fec505;
+    border-radius: 10px;
+  }
+  .hamburger_button {
+    max-height: 30px;
+  }
+  nav {
+    background-color: #212528;
+    height: 6vh;
+  }
+  .menu_open {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: #212528;
+    overflow: hidden;
+    color: white;
+    width: 100vw;
+    padding-left: 12vw;
+    animation-name: open_menu;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  .menu_close {
+    position: absolute;
+    height: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #212528;
+    overflow: hidden;
+    color: white;
+    width: 100vw;
+    justify-content: space-between;
+    padding-left: 12vw;
+    animation-name: close_menu;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+}
+@media (max-width: 768px) {
+  .top_container {
+    height: 52vh;
+  }
+  .header_text_line_1 {
+    font-size: 20pt;
+    font-style: italic;
+    padding: 15px;
+    text-align: center;
+  }
+  .header_text_line_2 {
+    font-size: 34pt;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  header {
+    width: 100vw;
+    /* border: 1px solid red; */
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid blue; */
+    width: 60vw;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    color: white;
+  }
+  nav {
+    background-color: #212528;
+    height: 6vh;
+  }
+  .menu_open {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #212528;
+    overflow: hidden;
+    color: white;
+    width: 100vw;
+    justify-content: space-between;
+    padding-left: 12vw;
+    animation-name: open_menu;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  .menu_close {
+    position: absolute;
+    height: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #212528;
+    overflow: hidden;
+    color: white;
+    width: 100vw;
+    justify-content: space-between;
+    padding-left: 12vw;
+    animation-name: close_menu;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
 }
 
-@keyframes App-logo-spin {
+@keyframes open_menu {
   from {
-    transform: rotate(0deg);
+    height: 0px;
   }
   to {
-    transform: rotate(360deg);
+    height: 20vh;
+  }
+}
+@keyframes close_menu {
+  from {
+    height: 20vh;
+  }
+  to {
+    height: 0px;
   }
 }
